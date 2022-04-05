@@ -4,11 +4,7 @@ $dsn = "mysql:host=localhost;dbname=literie3000";
 $db = new PDO($dsn, "root","");
 
 $query = $db->query("SELECT *
-FROM matelas
-INNER JOIN matelas_dimensions
-ON matelas.id = matelas_dimensions.matelas_id
-INNER JOIN dimensions
-ON matelas_dimensions.dimensions_id = dimensions.id;");
+FROM matelas");
 $matelas = $query->fetchAll();
 ?>
 
@@ -18,7 +14,7 @@ include("templates/header.php");
 
 <h1>Nos Matelas</h1>
 
-<h1>Ajouter un matelas</h1><!-- <h1><a href="add_product.php"></a></h1> -->
+<h1><a href="add_product.php">Ajouter un matelas</a></h1>
 
 
 <div class="matelas">
@@ -33,7 +29,7 @@ include("templates/header.php");
             <h2> <?= $item["reference"] ?></h2>
 
             <h3>dimension :</h3><p> <?= $item["taille"] ?></p>
-            <h3>Prix :</h3><P> <del><?= $item["anc_prix"] ?></del> <?= $item["nouv_prix"] ?></p>
+            <h3>Prix :</h3><P> <del><?= $item["anc_prix"] ?> €</del> <?= $item["nouv_prix"] ?> €</p>
         </div>
     <?php
     }
