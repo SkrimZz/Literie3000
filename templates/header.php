@@ -11,6 +11,6 @@
     <div class="container">
         <div class="logo-wrapper">
             <a href="index.php">
-                <img src="img/logo_transparent.png" alt="Logo Literie 3000" class="logo">
+                <img src="img/logo.png" alt="Logo Literie 3000" class="logo">
             </a>
         </div>

@@ -29,7 +29,7 @@ include("templates/header.php");
             <h2> <?= $item["reference"] ?></h2>
 
             <h3>dimension :</h3><p> <?= $item["taille"] ?></p>
-            <h3>Prix :</h3><P> <del><?= $item["anc_prix"] ?> €</del> <?= $item["nouv_prix"] ?> €</p>
+            <h3>Prix :</h3><P> <del><?= $item["anc_prix"] ?> </del> <?= $item["nouv_prix"] ?> €</p>
         </div>
     <?php
     }
